@@ -1,0 +1,19 @@
+
+
+h1 {
+    color: brown;
+}
+
+p#welcome::first-letter{
+font-size: larger;
+color: rgb(127, 255, 187);
+}
+
+
+#second{
+    color: rgb(176, 45, 176);
+}
+
+.second{
+    color: aquamarine;
+}
