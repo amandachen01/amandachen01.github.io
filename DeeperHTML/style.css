@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.table {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom-link {
+    text-decoration: none; 
+    color: blue; 
+}
+.custom-link:visited {
+    color: darkblue; 
+}
+.custom-link:hover {
+    color: royalblue;
+}
+
+ol.c {
+    list-style-type: lower-roman; 
+}
+
+
+ol.d {
+    list-style-type: lower-alpha; 
+}
+
+ul.a {
+    list-style-type: square; 
+}
+
+ul.b li::before {
+    content: "$\00a0"; 
+    margin-right: 5px; 
+}
+
+li::first-letter {
+    font-size: 1.2em; 
+    font-weight: bold; 
+}
