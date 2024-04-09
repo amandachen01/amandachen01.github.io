@@ -1,1 +1,14 @@
-/*# sourceMappingURL=week3.css.map */
+body {
+  background-color: #D6D6CE;
+  color: #800000;
+}
+
+.body {
+  background-color: #D6D6CE;
+  color: #800000;
+}
+
+.footer {
+  background-color: #767676;
+  color: #D6D6CE;
+}

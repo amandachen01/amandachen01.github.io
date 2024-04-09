@@ -1,0 +1,20 @@
+$pink: #ff69b4; 
+$dark-pink: #c71585;
+$light-pink: #ffa5d2; 
+
+body {
+  background-color: $light-pink;
+  color: $dark-pink;
+}
+
+
+.content {
+    background-color: $light-pink;
+    color: $dark-pink;
+}
+
+
+.footer {
+    background-color: $dark-pink;
+    color: $light-pink;
+}
