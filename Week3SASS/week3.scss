@@ -1,20 +1,13 @@
-$pink: #ff69b4; 
-$dark-pink: #c71585;
-$light-pink: #ffa5d2; 
+$maroon: #800000; 
+$dark-gray: #767676; 
+$light-gray: #D6D6CE; 
 
 body {
-  background-color: $light-pink;
-  color: $dark-pink;
+  background-color: $light-gray;
+  color: $maroon;
 }
-
-
-.content {
-    background-color: $light-pink;
-    color: $dark-pink;
-}
-
 
 .footer {
-    background-color: $dark-pink;
-    color: $light-pink;
+  background-color: $dark-gray;
+  color: $light-gray;
 }
