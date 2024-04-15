@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Bootstrap</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #accce8; 
+    }
+    .background-color {
+        background-color: #307ac5; 
+        border: 1px solid #fff; 
+        margin-bottom: 10px;
+    }
+    .column-padding {
+        padding: 6px; 
+    }
+    .row-cols-custom > * {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://getbootstrap.com/docs/5.3/components/navbar/">Bootstrap basics and JS buttons</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" aria-current="page" href="https://amandachen01.github.io/console.html">Front Page</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3">
+    <div class="row text-center">
+        <div class="col-sm-6 col-md-3 mb-4 background-color column-padding">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-4 background-color column-padding">
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-4 background-color column-padding">
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-4 background-color column-padding">
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <button id="greetButton" class="btn btn-primary">Greet</button>
+            <button id="changeButton" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div> 
+
+<script>
+document.getElementById('greetButton').onclick = function() {
+    var now = new Date();
+    var hour = now.getHours();
+    if (hour < 12) {
+        alert('Good Morning!');
+    } else if (hour < 18) {
+        alert('Good Day!');
+    } else {
+        alert('Good Evening!');
+    }
+};
+
+document.getElementById('changeButton').onclick = function() {
+    var button = document.getElementById('changeButton');
+    console.log('Before:', button.textContent, button.className); 
+    button.textContent = 'Done';
+    button.className = 'btn btn-success'; 
+    console.log('After:', button.textContent, button.className); 
+};
+</script>
+</body>
+</html>
+
+
