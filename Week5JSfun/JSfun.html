@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Trivia Q&A </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script src="fun.js"></script>
+<h1>Try some Q&As</h1>
+
+<div id="trivia-part">
+    <h2>Trivia Question.</h2>
+    <div id="question">Q: What is the capital of France?</div>
+    <input type="text" id="trivia-answer" placeholder="Try to answer here" onkeypress="PressEnter(event, CheckTriviaAnswer)">
+    <button onclick="CheckTriviaAnswer()">Submit</button>
+    <div id="trivia-response"></div>
+</div>
+
+<div id="number-part">
+    <h2>Enter a five digit number like 12345.</h2>
+    <input type="text" id="number-input" placeholder="Enter number here" onkeypress="PressEnter(event, CheckNumber)">
+    <button onclick="CheckNumber()">Submit</button>
+    <div id="number-response"></div>
+</div>
+</body>
+</html>

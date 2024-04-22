@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #201f1f;
+}
+
+h1 {
+    color: rgb(223, 162, 191);
+}
+
+#trivia-part, #number-part {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #c05c7c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(103, 101, 230), 119, 2);
+}
+
+div#trivia-response, div#number-response {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 5px solid #0275d8;
+}
