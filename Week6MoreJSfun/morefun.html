@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorting Fruit</title>
+<style>
+    body {
+        background-color: #e2edf5; 
+        color: #1f1e1e; 
+        font-family: 'Arial', sans-serif; 
+        text-align: center; 
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        text-align: left;
+    }
+    .box {
+        background-color: #ffffff; 
+        border: 1px solid #bbb; 
+        border-radius: 8px; 
+        padding: 20px;
+        margin-top: 20px;
+    }
+    h1 {
+        margin-bottom: 0; 
+        text-align: left;
+    }
+    h2 {
+        color: #444;
+        text-align: left; 
+    }
+    button {
+        background-color: #007bff; 
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    button:hover {
+        background-color: #0056b3; 
+    #results {
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: left; 
+    }
+    #output {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+    <h1>Sorting Fruit</h1>
+    <p>For the following sets of JS functions, we work on sorting an assortment of fruits alphabetically, ultimately delivering whatever fruit comes last in the alphabet. Note that each part builds upon the previous one.</p>
+
+    <div class="box">
+        <h2>Part 1: Initial Sorting</h2>
+        <p>In this first section, we want to determine which inputted fruit comes last in the alphabet. Our fruit array currently lists: 'Watermelon', 'Apple', 'Orange', and 'Kiwi'.</p>
+        <button onclick="sortFruits(['Watermelon', 'Apple', 'Orange', 'Kiwi'])">Sort Initial Fruits</button>
+    </div>
+
+    <div class="box">
+        <h2>Part 2: Testing Success by Adding More</h2>
+        <p>Now that we have experimented with alphabetizing the 4 given fruits above, let's test this function further. Let's add "Banana", "Blueberries", "Mango", and "Peach" into the fruit salad we have already made.</p>
+        <button onclick="sortFruits(['Watermelon', 'Apple', 'Orange', 'Kiwi', 'Banana', 'Blueberries', 'Mango', 'Peach'])">Add More Fruits</button>
+    </div>
+
+    <div class="box">
+        <h2>Part 3: Testing with fruits later in the alphabet</h2>
+        <p>This next function sorts: 'Watermelon', 'Apple', 'Orange', 'Kiwi', 'Blueberries', 'Mango', 'Peach', and 'Yuzu' alphabetically.</p>
+        <button onclick="sortFruits(['Watermelon', 'Apple', 'Orange', 'Kiwi', 'Blueberries', 'Mango', 'Peach', 'Yuzu'])">Add Even More Fruits</button>
+    </div>
+
+    <div id="results"></div>
+
+    <div class="box">
+        <h2>Part 4: Input & Sort Items Alphabetically</h2>
+        <button onclick="InputAndSort()">Start Sorting</button>
+    </div>
+
+    <div id="output"></div>
+</div>
+
+
+
+<script>
+function sortFruits(fruits) {
+    fruits.sort((a, b) => a.localeCompare(b));
+    const lastFruit = fruits[fruits.length - 1];
+    document.getElementById("results").innerHTML = `<strong>Fruits sorted:</strong> ${fruits.join(', ')}<br><strong>Last Alphabetical Item:</strong> ${lastFruit}`;
+}
+
+function InputAndSort() {
+    const numCategories = parseInt(prompt("How many categories would you like to enter? Choose between 2 and 4."), 10);
+
+    if (isNaN(numCategories) || numCategories < 2 || numCategories > 4) {
+        alert("Please enter a valid number between 2 and 4.");
+        return;
+    }
+
+    let categories = [];
+    for (let i = 0; i < numCategories; i++) {
+        let category = prompt(`Enter category ${i + 1} of ${numCategories}:`);
+        if (!category) {
+            alert("No category entered, please type your category.");
+            return;
+        }
+        categories.push(category);
+    }
+
+    let items = [];
+    let itemsUnsorted = [];
+    for (let category of categories) {
+        let item = prompt(`Enter an item for the category '${category}':`);
+        if (item) {
+            items.push(item);
+            itemsUnsorted.push(item);
+        } else {
+            alert("No item entered for the category, please enter an item.");
+            return;
+        }
+    }
+
+    items.sort((a, b) => a.localeCompare(b));
+    const outputElement = document.getElementById('output');
+    outputElement.innerHTML = `<p>You entered: ${itemsUnsorted.join(', ')}</p>`;
+    outputElement.innerHTML += `<p>I sorted them: ${items.join(', ')}</p>`;
+}
+</script>
+
+</body>
+</html>
