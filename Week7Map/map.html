@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet 快速开始示例</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map" style="width: 600px; height: 400px;"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([39.9042, 116.4074], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+var marker = L.marker([39.9042, 116.4074]).addTo(map);
+marker.bindPopup("<b>北京天安门</b><br>这是北京的中心。").openPopup();
+
+
+var circle = L.circle([39.907, 116.400], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
+var polygon = L.polygon([
+    [39.910, 116.412],
+    [39.913, 116.400],
+    [39.907, 116.390]
+]).addTo(map);
+polygon.bindPopup("我是一个多边形。");
+
+
+    </script>
+</body>
+</html>
